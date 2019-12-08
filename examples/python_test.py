@@ -1,14 +1,25 @@
 import os
 import numpy as np 
 import matplotlib.pyplot as plt 
+import numpy.matlib 
 
 e = np.array([1, 2, 3])
 f = np.array([2, 3, 4])
+p = np.matlib.eye(3, 3)
+#print("the fist rows:", p[0,:])
+print ("the type of p:", type(p))
+g = np.zeros(3)
+print("the g:", g)
+#h = np.matrix.ye(3)
+
+print("the_res: ", p * f.transpose())
+
+
 a = np.append(e[1:3], f,axis = 0)
 m = np.array([[1,2,3], [2,2,3], [2,3,4]])
 print("the inverse:", type(np.linalg.inv(m)))
-g = np.vdot(e, f.transpose())
-print("the g: ", g)
+#g = np.vdot(e, f.transpose())
+print("the g: ", e.transpose() * f)
 
 print("the a: ", a)
 
