@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from scipy.linalg import toeplitz
 from scipy.linalg import pinv
 from scipy.linalg import hankel
+from scipy.linalg import svd
 from scipy.sparse import triu
 from control import tf, ss, mixsyn, step_response
 #define the hankel matrix
@@ -19,5 +20,6 @@ def ERAOKIDMPC(u, y, r, Nc, Np, lb, ub):
     H0 = hank(g, 0)
     H1 = hank(g, 1)
     try:
+        [U, S, V] = 
         
         
